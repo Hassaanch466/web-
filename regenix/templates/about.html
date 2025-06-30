@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-5 text-center" style="background-color: #f5f7f8;">
+  <div class="container">
+    <h1 class="display-5 fw-bold" style="color:#B38E5D ;">About Regenix</h1>
+    <p class="lead text-muted mb-4">Where Science Meets Aesthetic Excellence</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/ci.jpg') }}" class="img-fluid rounded-4 shadow" alt="Clinic Interior">
+
+      </div>
+      <div class="col-md-6">
+        <h3 class="fw-bold mb-3" style="color: #B38E5D ;">Our Philosophy</h3>
+        <p class="text-muted">At Regenix, we believe that every individual deserves to feel confident and radiant in their skin. We combine state-of-the-art aesthetic medicine with a compassionate, personalized approach to beauty and wellness. Every service is tailored to meet your unique needs, because no two skin stories are alike.</p>
+        <p class="text-muted">Our clinic was founded with the vision of creating a premium destination where science, artistry, and trust converge. From non-invasive facials to advanced treatments, our mission is to deliver results you can see and confidence you can feel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100">
+          <h5 class="fw-bold mb-2" style="color:#B38E5D  ;">Expert-Led Care</h5>
+          <p class="text-muted">Treatments performed by certified doctors, dermatologists, and technicians trained in the latest protocols.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100">
+          <h5 class="fw-bold mb-2" style="color:#B38E5D  ;">Safe & Advanced</h5>
+          <p class="text-muted">We use only clinically proven equipment, FDA-approved products, and sterile, modern techniques.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100">
+          <h5 class="fw-bold mb-2" style="color: #B38E5D ;">Results That Inspire</h5>
+          <p class="text-muted">Our success is measured by your confidence. We aim for natural-looking, lasting enhancements that empower you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-center">
+  <div class="container">
+    <h3 class="fw-bold" style="color:#B38E5D  ;">Your Confidence Is Our Craft</h3>
+    <p class="lead text-muted">Step into Regenix — where beauty is elevated with expertise.</p>
+    <a href="/contact" class="btn btn-lg rounded-pill mt-3 px-4" style="background-color: #B38E5D ; color: white;">Book Your Consultation</a>
+  </div>
+</section>
+{% endblock %}

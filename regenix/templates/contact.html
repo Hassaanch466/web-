@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-5" style="background-color: #f5f7f8;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold" style="color: #B38E5D;">Contact Regenix</h1>
+      <p class="lead text-muted">We’d love to hear from you. Book your consultation today.</p>
+    </div>
+    
+    <div class="row g-5 align-items-center">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4">
+
+          <!-- Flash messages -->
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                  {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+
+          <!-- Contact Form -->
+          <form method="POST" action="/contact">
+            <div class="mb-3">
+              <label for="name" class="form-label fw-semibold">Name</label>
+              <input type="text" class="form-control rounded-pill" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold">Email</label>
+              <input type="email" class="form-control rounded-pill" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label fw-semibold">Message</label>
+              <textarea class="form-control rounded-4" id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn px-5 py-2 rounded-pill" style="background-color: #B38E5D ; color: white;">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <div class="p-4 bg-white shadow-sm rounded-4">
+          <h5 class="fw-bold mb-3" style="color:#B38E5D ;">Clinic Details</h5>
+          <p><strong> Address:</strong> Jail Road, Lahore, Pakistan</p>
+          <p><strong> Phone:</strong> <a href="tel:+923210057711" style="color:#B38E5D ;">+92 3210057711</a></p>
+          <p><strong> WhatsApp:</strong> <a href="https://wa.me/03210067711" style="color: #B38E5D ;">Chat on WhatsApp</a></p>
+          <p><strong> Email:</strong> <a href="mailto:info@regenix.pk" style="color:#B38E5D ;">regenixaesthics@gmail.com</a></p>
+        </div>
+
+        <!-- Google Map -->
+       <div class="ratio ratio-16x9 mt-4 rounded-4 overflow-hidden shadow-sm">
+  <iframe
+    src="https://www.google.com/maps?q=Regenix&output=embed"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="text-center py-5">
+  <h1 class="display-5 fw-bold" style="color: #B38E5D;">Our Services</h1>
+  <p class="lead text-muted">Comprehensive skin, hair & body treatments tailored to your needs.</p>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+
+      {% set services = [
+        ("Hydrafacials", "Deep exfoliation and hydration for glowing skin."),
+        ("Laser", "Advanced laser solutions for various skin concerns."),
+        ("Pico Laser", "High-intensity laser for pigment and acne scars."),
+        ("Diode Laser", "Effective and safe hair removal."),
+        ("Fractional Laser", "Skin resurfacing for scars, wrinkles, and texture."),
+        ("Morpheus 8", "Radiofrequency microneedling for lifting and tightening."),
+        ("Botox Treatment", "Smooth wrinkles and fine lines."),
+        ("Fillers Treatment", "Restore facial volume and contour."),
+        ("Threads Treatment", "Non-surgical lifting and skin tightening."),
+        ("Hair Transplant", "Permanent solution for hair loss."),
+        ("Liposuctions", "Fat removal and body contouring."),
+        ("Treatment of Scars", "Solutions for acne, surgical, and trauma scars."),
+        ("Treatment of Pigmentation", "Target melasma, freckles, and uneven skin tone."),
+        ("Hair Removal Lasers", "Full body permanent hair reduction."),
+        ("Laser for Scars & Acne", "Target acne and post-acne scarring."),
+        ("Laser for Pigmentation", "Even out skin tone and reduce dark spots.")
+      ] %}
+
+      {% for name, desc in services %}
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title" style="color: #B38E5D;">{{ name }}</h5>
+            <p class="card-text">{{ desc }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

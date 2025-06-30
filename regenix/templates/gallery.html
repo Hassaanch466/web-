@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-5 text-center bg-light">
+  <div class="container">
+    <h1 class="display-5 fw-bold" style="color:#B38E5D;">Our Gallery</h1>
+    <p class="lead text-muted">A glimpse into our clinic, treatments, and transformations.</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      {% for image in images %}
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <img src="{{ url_for('static', filename='gallery/' ~ image) }}" class="card-img-top img-fluid" alt="Gallery Image">
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
